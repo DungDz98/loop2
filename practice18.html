@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trytoguess!</title>
+</head>
+<body>
+<input type="button" value="Play" onclick="findanumber()">
+<script>
+    function findanumber() {
+        let num1 = parseInt(prompt('Enter a start number: '));
+        let num2 = parseInt(prompt('Enter a end number: '));
+        let num0 = parseInt(prompt('Enter a number between ' + num1 + ' and ' + num2));
+        let result = Math.floor(Math.random() * (num2 - num1 + 1)) + num1;
+        let count = 1;
+        while (num0 !== result && !isNaN(num0)) {
+            if (count == 3) {
+                alert('Mission Failed!');
+                break;
+            }
+            ;
+            if (num0 < result) {
+                alert('Lower!');
+                count++;
+                num0 = parseInt(prompt('Enter a number between ' + num1 + ' and ' + num2));
+            } else if (num0 > result) {
+                alert('Little Higher!');
+                count++;
+                num0 = parseInt(prompt('Enter a number between ' + num1 + ' and ' + num2));
+            }
+        }
+        if (result == num0) {
+            alert('Winner!');
+        }
+        ;
+    }
+
+
+</script>
+</body>
+</html>

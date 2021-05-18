@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PrimeNumber</title>
+</head>
+<body>
+<script>
+    function checkPrimenumber(a) {
+        if (a < 2) {
+            return false;
+        } else if (a == 2) {
+            return true;
+        } else if (a % 2 == 0) {
+            return false;
+        } else {
+            for (let i = 3; i <= Math.sqrt(a); i += 2) {
+                if (a % i == 0) {
+                    return false;
+                    break;
+                }
+            }
+        }
+        return true;
+    };
+
+    let numbers = prompt('Enter a number: ');
+    let count = 1;
+    for (let number = 2; count <= numbers; number++) {
+        if (checkPrimenumber(number)) {
+            document.write(number + '<br>');
+            count++;
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fibonacci2</title>
+</head>
+<body>
+<script>
+  let f0 = 0;
+  let f1 = fn = 1;
+  while ((fn % 5) !== 0) {
+    f0 = f1;
+    f1 = fn;
+    fn = f0 + f1;
+  };
+    document.write('So dau tien trong day chia het cho 5 la : ' + fn);
+</script>
+</body>
+</html>

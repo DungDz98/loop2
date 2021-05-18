@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>temperature</title>
+</head>
+<body>
+<script>
+  let input = null;
+  do {
+    input = parseInt(prompt('Nhap nhiet do vao day: '));
+  } while (isNaN(input));
+  if (input > 100) {
+    alert('Giam nhiet do');
+  } else if (input < 20) {
+    alert('Tang nhiet do');
+  } else {
+    alert('Fine!');
+  }
+
+</script>
+</body>
+</html>

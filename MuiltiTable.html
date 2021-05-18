@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MultiplicationTable</title>
+</head>
+<body>
+<script>
+    let mt = '<table border="1" cellspacing="0" cellpadding="3">';
+    let i = 1;
+    let j = 2;
+    while (i <= 10) {
+        mt += '<tr>';
+        while (j <= 10) {
+            mt += '<td>' + j + 'x' + i + '=' + j*i + '</td>';
+            j++;
+        }
+        mt += '</tr>';
+        i++;
+        j = 2;
+    }
+    mt += '</table>';
+    document.write(mt);
+</script>
+</body>
+</html>
